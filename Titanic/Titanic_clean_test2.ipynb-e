@@ -2,7 +2,7 @@
  "cells": [
   {
    "cell_type": "code",
-   "execution_count": 1,
+   "execution_count": 345,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -16,7 +16,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 7,
+   "execution_count": 346,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -25,10 +25,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 12,
-   "metadata": {
-    "scrolled": true
-   },
+   "execution_count": 347,
+   "metadata": {},
    "outputs": [
     {
      "data": {
@@ -107,66 +105,34 @@
        "      <td>NaN</td>\n",
        "      <td>Q</td>\n",
        "    </tr>\n",
-       "    <tr>\n",
-       "      <th>3</th>\n",
-       "      <td>895</td>\n",
-       "      <td>3</td>\n",
-       "      <td>Wirz, Mr. Albert</td>\n",
-       "      <td>male</td>\n",
-       "      <td>27.0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>315154</td>\n",
-       "      <td>8.6625</td>\n",
-       "      <td>NaN</td>\n",
-       "      <td>S</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>4</th>\n",
-       "      <td>896</td>\n",
-       "      <td>3</td>\n",
-       "      <td>Hirvonen, Mrs. Alexander (Helga E Lindqvist)</td>\n",
-       "      <td>female</td>\n",
-       "      <td>22.0</td>\n",
-       "      <td>1</td>\n",
-       "      <td>1</td>\n",
-       "      <td>3101298</td>\n",
-       "      <td>12.2875</td>\n",
-       "      <td>NaN</td>\n",
-       "      <td>S</td>\n",
-       "    </tr>\n",
        "  </tbody>\n",
        "</table>\n",
        "</div>"
       ],
       "text/plain": [
-       "   PassengerId  Pclass                                          Name     Sex  \\\n",
-       "0          892       3                              Kelly, Mr. James    male   \n",
-       "1          893       3              Wilkes, Mrs. James (Ellen Needs)  female   \n",
-       "2          894       2                     Myles, Mr. Thomas Francis    male   \n",
-       "3          895       3                              Wirz, Mr. Albert    male   \n",
-       "4          896       3  Hirvonen, Mrs. Alexander (Helga E Lindqvist)  female   \n",
+       "   PassengerId  Pclass                              Name     Sex   Age  SibSp  \\\n",
+       "0          892       3                  Kelly, Mr. James    male  34.5      0   \n",
+       "1          893       3  Wilkes, Mrs. James (Ellen Needs)  female  47.0      1   \n",
+       "2          894       2         Myles, Mr. Thomas Francis    male  62.0      0   \n",
        "\n",
-       "    Age  SibSp  Parch   Ticket     Fare Cabin Embarked  \n",
-       "0  34.5      0      0   330911   7.8292   NaN        Q  \n",
-       "1  47.0      1      0   363272   7.0000   NaN        S  \n",
-       "2  62.0      0      0   240276   9.6875   NaN        Q  \n",
-       "3  27.0      0      0   315154   8.6625   NaN        S  \n",
-       "4  22.0      1      1  3101298  12.2875   NaN        S  "
+       "   Parch  Ticket    Fare Cabin Embarked  \n",
+       "0      0  330911  7.8292   NaN        Q  \n",
+       "1      0  363272  7.0000   NaN        S  \n",
+       "2      0  240276  9.6875   NaN        Q  "
       ]
      },
-     "execution_count": 12,
+     "execution_count": 347,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
    "source": [
-    "df2.head(5)"
+    "df2.head(3)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 9,
+   "execution_count": 348,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -175,25 +141,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 13,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "687"
-      ]
-     },
-     "execution_count": 13,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 10,
+   "execution_count": 349,
    "metadata": {
     "scrolled": true
    },
@@ -300,7 +248,7 @@
        "2      0  STON/O2. 3101282   7.9250   NaN        S  "
       ]
      },
-     "execution_count": 10,
+     "execution_count": 349,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -311,7 +259,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 6,
+   "execution_count": 350,
    "metadata": {},
    "outputs": [
     {
@@ -320,7 +268,7 @@
        "((891, 11), (418, 11))"
       ]
      },
-     "execution_count": 6,
+     "execution_count": 350,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -332,7 +280,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 129,
+   "execution_count": 351,
    "metadata": {},
    "outputs": [
     {
@@ -341,7 +289,7 @@
        "(1309, 11)"
       ]
      },
-     "execution_count": 129,
+     "execution_count": 351,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -353,7 +301,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 130,
+   "execution_count": 352,
    "metadata": {},
    "outputs": [
     {
@@ -373,7 +321,7 @@
        "dtype: int64"
       ]
      },
-     "execution_count": 130,
+     "execution_count": 352,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -384,7 +332,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 131,
+   "execution_count": 353,
    "metadata": {},
    "outputs": [
     {
@@ -404,7 +352,7 @@
        "dtype: bool"
       ]
      },
-     "execution_count": 131,
+     "execution_count": 353,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -415,7 +363,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 132,
+   "execution_count": 354,
    "metadata": {},
    "outputs": [
     {
@@ -424,7 +372,7 @@
        "(263, 1, 2, 1014)"
       ]
      },
-     "execution_count": 132,
+     "execution_count": 354,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -444,7 +392,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 137,
+   "execution_count": 355,
    "metadata": {},
    "outputs": [
     {
@@ -553,7 +501,7 @@
        "2  Heikkinen   Miss  "
       ]
      },
-     "execution_count": 137,
+     "execution_count": 355,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -566,7 +514,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 138,
+   "execution_count": 356,
    "metadata": {},
    "outputs": [
     {
@@ -585,7 +533,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 139,
+   "execution_count": 357,
    "metadata": {},
    "outputs": [
     {
@@ -653,7 +601,7 @@
        "30  PC 17601  27.7208   NaN        C  Uruchurtu   Don  "
       ]
      },
-     "execution_count": 139,
+     "execution_count": 357,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -664,7 +612,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 140,
+   "execution_count": 358,
    "metadata": {},
    "outputs": [
     {
@@ -732,7 +680,7 @@
        "414      0  PC 17758  108.9  C105        C  Oliva y Ocana   Dona  "
       ]
      },
-     "execution_count": 140,
+     "execution_count": 358,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -743,7 +691,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 141,
+   "execution_count": 359,
    "metadata": {},
    "outputs": [
     {
@@ -752,7 +700,7 @@
        "(False, False)"
       ]
      },
-     "execution_count": 141,
+     "execution_count": 359,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -822,7 +770,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 142,
+   "execution_count": 360,
    "metadata": {},
    "outputs": [
     {
@@ -831,7 +779,7 @@
        "1"
       ]
      },
-     "execution_count": 142,
+     "execution_count": 360,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -849,7 +797,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 143,
+   "execution_count": 361,
    "metadata": {},
    "outputs": [
     {
@@ -858,7 +806,7 @@
        "False"
       ]
      },
-     "execution_count": 143,
+     "execution_count": 361,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -898,7 +846,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 144,
+   "execution_count": 362,
    "metadata": {},
    "outputs": [
     {
@@ -907,7 +855,7 @@
        "263"
       ]
      },
-     "execution_count": 144,
+     "execution_count": 362,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -918,7 +866,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 145,
+   "execution_count": 363,
    "metadata": {},
    "outputs": [
     {
@@ -946,7 +894,7 @@
        "Name: title, dtype: int64"
       ]
      },
-     "execution_count": 145,
+     "execution_count": 363,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -957,7 +905,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 146,
+   "execution_count": 364,
    "metadata": {},
    "outputs": [
     {
@@ -1018,7 +966,7 @@
        " Mr      28.318910    26.0"
       ]
      },
-     "execution_count": 146,
+     "execution_count": 364,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -1034,7 +982,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 147,
+   "execution_count": 365,
    "metadata": {},
    "outputs": [
     {
@@ -1105,7 +1053,7 @@
        " Don   40.0    40.0     NaN     NaN"
       ]
      },
-     "execution_count": 147,
+     "execution_count": 365,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -1118,7 +1066,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 148,
+   "execution_count": 366,
    "metadata": {
     "scrolled": true
    },
@@ -1277,7 +1225,7 @@
        " the Countess  33.000000        NaN        NaN"
       ]
      },
-     "execution_count": 148,
+     "execution_count": 366,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -1312,7 +1260,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 149,
+   "execution_count": 367,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -1343,7 +1291,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 150,
+   "execution_count": 368,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -1361,7 +1309,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 151,
+   "execution_count": 369,
    "metadata": {},
    "outputs": [
     {
@@ -1370,7 +1318,7 @@
        "0"
       ]
      },
-     "execution_count": 151,
+     "execution_count": 369,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -1416,7 +1364,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 187,
+   "execution_count": 375,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -1436,7 +1384,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 188,
+   "execution_count": 376,
    "metadata": {},
    "outputs": [
     {
@@ -1446,7 +1394,7 @@
        "      dtype=object)"
       ]
      },
-     "execution_count": 188,
+     "execution_count": 376,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -1457,7 +1405,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 189,
+   "execution_count": 377,
    "metadata": {
     "scrolled": true
    },
@@ -1478,818 +1426,13 @@
        "Name: Fare, dtype: int64"
       ]
      },
-     "execution_count": 189,
+     "execution_count": 377,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
    "source": [
     "df.groupby('Ticket_1')['Fare'].count()"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "raw",
-   "metadata": {},
-   "source": [
-    "********  Ticket_2 "
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 190,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/html": [
-       "<div>\n",
-       "<style scoped>\n",
-       "    .dataframe tbody tr th:only-of-type {\n",
-       "        vertical-align: middle;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe tbody tr th {\n",
-       "        vertical-align: top;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe thead th {\n",
-       "        text-align: right;\n",
-       "    }\n",
-       "</style>\n",
-       "<table border=\"1\" class=\"dataframe\">\n",
-       "  <thead>\n",
-       "    <tr style=\"text-align: right;\">\n",
-       "      <th></th>\n",
-       "      <th>PassengerId</th>\n",
-       "      <th>Pclass</th>\n",
-       "      <th>Name</th>\n",
-       "      <th>Sex</th>\n",
-       "      <th>Age</th>\n",
-       "      <th>SibSp</th>\n",
-       "      <th>Parch</th>\n",
-       "      <th>Ticket</th>\n",
-       "      <th>Fare</th>\n",
-       "      <th>Cabin</th>\n",
-       "      <th>Embarked</th>\n",
-       "      <th>surname</th>\n",
-       "      <th>title</th>\n",
-       "      <th>Ticket_1</th>\n",
-       "      <th>Cabin_1</th>\n",
-       "      <th>Ticket_2</th>\n",
-       "    </tr>\n",
-       "  </thead>\n",
-       "  <tbody>\n",
-       "    <tr>\n",
-       "      <th>0</th>\n",
-       "      <td>1</td>\n",
-       "      <td>3</td>\n",
-       "      <td>Braund, Mr. Owen Harris</td>\n",
-       "      <td>male</td>\n",
-       "      <td>22.0</td>\n",
-       "      <td>1</td>\n",
-       "      <td>0</td>\n",
-       "      <td>A/5 21171</td>\n",
-       "      <td>7.2500</td>\n",
-       "      <td>NaN</td>\n",
-       "      <td>S</td>\n",
-       "      <td>Braund</td>\n",
-       "      <td>Mr</td>\n",
-       "      <td>A</td>\n",
-       "      <td>Z</td>\n",
-       "      <td>21171</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>1</th>\n",
-       "      <td>2</td>\n",
-       "      <td>1</td>\n",
-       "      <td>Cumings, Mrs. John Bradley (Florence Briggs Th...</td>\n",
-       "      <td>female</td>\n",
-       "      <td>38.0</td>\n",
-       "      <td>1</td>\n",
-       "      <td>0</td>\n",
-       "      <td>PC 17599</td>\n",
-       "      <td>71.2833</td>\n",
-       "      <td>C85</td>\n",
-       "      <td>C</td>\n",
-       "      <td>Cumings</td>\n",
-       "      <td>Mrs</td>\n",
-       "      <td>Un</td>\n",
-       "      <td>C</td>\n",
-       "      <td>17599</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>2</th>\n",
-       "      <td>3</td>\n",
-       "      <td>3</td>\n",
-       "      <td>Heikkinen, Miss. Laina</td>\n",
-       "      <td>female</td>\n",
-       "      <td>26.0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>STON/O2. 3101282</td>\n",
-       "      <td>7.9250</td>\n",
-       "      <td>NaN</td>\n",
-       "      <td>S</td>\n",
-       "      <td>Heikkinen</td>\n",
-       "      <td>Miss</td>\n",
-       "      <td>Un</td>\n",
-       "      <td>Z</td>\n",
-       "      <td>3101282</td>\n",
-       "    </tr>\n",
-       "  </tbody>\n",
-       "</table>\n",
-       "</div>"
-      ],
-      "text/plain": [
-       "   PassengerId  Pclass                                               Name  \\\n",
-       "0            1       3                            Braund, Mr. Owen Harris   \n",
-       "1            2       1  Cumings, Mrs. John Bradley (Florence Briggs Th...   \n",
-       "2            3       3                             Heikkinen, Miss. Laina   \n",
-       "\n",
-       "      Sex   Age  SibSp  Parch            Ticket     Fare Cabin Embarked  \\\n",
-       "0    male  22.0      1      0         A/5 21171   7.2500   NaN        S   \n",
-       "1  female  38.0      1      0          PC 17599  71.2833   C85        C   \n",
-       "2  female  26.0      0      0  STON/O2. 3101282   7.9250   NaN        S   \n",
-       "\n",
-       "     surname  title Ticket_1 Cabin_1 Ticket_2  \n",
-       "0     Braund     Mr        A       Z    21171  \n",
-       "1    Cumings    Mrs       Un       C    17599  \n",
-       "2  Heikkinen   Miss       Un       Z  3101282  "
-      ]
-     },
-     "execution_count": 190,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "df['Ticket_2'] = df['Ticket'].apply(lambda x: x.split(' ')[-1])\n",
-    "df.head(3)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 191,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/html": [
-       "<div>\n",
-       "<style scoped>\n",
-       "    .dataframe tbody tr th:only-of-type {\n",
-       "        vertical-align: middle;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe tbody tr th {\n",
-       "        vertical-align: top;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe thead th {\n",
-       "        text-align: right;\n",
-       "    }\n",
-       "</style>\n",
-       "<table border=\"1\" class=\"dataframe\">\n",
-       "  <thead>\n",
-       "    <tr style=\"text-align: right;\">\n",
-       "      <th></th>\n",
-       "      <th>PassengerId</th>\n",
-       "      <th>Pclass</th>\n",
-       "      <th>Name</th>\n",
-       "      <th>Sex</th>\n",
-       "      <th>Age</th>\n",
-       "      <th>SibSp</th>\n",
-       "      <th>Parch</th>\n",
-       "      <th>Ticket</th>\n",
-       "      <th>Fare</th>\n",
-       "      <th>Cabin</th>\n",
-       "      <th>Embarked</th>\n",
-       "      <th>surname</th>\n",
-       "      <th>title</th>\n",
-       "      <th>Ticket_1</th>\n",
-       "      <th>Cabin_1</th>\n",
-       "      <th>Ticket_2</th>\n",
-       "    </tr>\n",
-       "  </thead>\n",
-       "  <tbody>\n",
-       "    <tr>\n",
-       "      <th>0</th>\n",
-       "      <td>1</td>\n",
-       "      <td>3</td>\n",
-       "      <td>Braund, Mr. Owen Harris</td>\n",
-       "      <td>male</td>\n",
-       "      <td>22.0</td>\n",
-       "      <td>1</td>\n",
-       "      <td>0</td>\n",
-       "      <td>A/5 21171</td>\n",
-       "      <td>7.2500</td>\n",
-       "      <td>NaN</td>\n",
-       "      <td>S</td>\n",
-       "      <td>Braund</td>\n",
-       "      <td>Mr</td>\n",
-       "      <td>A</td>\n",
-       "      <td>Z</td>\n",
-       "      <td>21171.0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>1</th>\n",
-       "      <td>2</td>\n",
-       "      <td>1</td>\n",
-       "      <td>Cumings, Mrs. John Bradley (Florence Briggs Th...</td>\n",
-       "      <td>female</td>\n",
-       "      <td>38.0</td>\n",
-       "      <td>1</td>\n",
-       "      <td>0</td>\n",
-       "      <td>PC 17599</td>\n",
-       "      <td>71.2833</td>\n",
-       "      <td>C85</td>\n",
-       "      <td>C</td>\n",
-       "      <td>Cumings</td>\n",
-       "      <td>Mrs</td>\n",
-       "      <td>Un</td>\n",
-       "      <td>C</td>\n",
-       "      <td>17599.0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>2</th>\n",
-       "      <td>3</td>\n",
-       "      <td>3</td>\n",
-       "      <td>Heikkinen, Miss. Laina</td>\n",
-       "      <td>female</td>\n",
-       "      <td>26.0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>STON/O2. 3101282</td>\n",
-       "      <td>7.9250</td>\n",
-       "      <td>NaN</td>\n",
-       "      <td>S</td>\n",
-       "      <td>Heikkinen</td>\n",
-       "      <td>Miss</td>\n",
-       "      <td>Un</td>\n",
-       "      <td>Z</td>\n",
-       "      <td>3101282.0</td>\n",
-       "    </tr>\n",
-       "  </tbody>\n",
-       "</table>\n",
-       "</div>"
-      ],
-      "text/plain": [
-       "   PassengerId  Pclass                                               Name  \\\n",
-       "0            1       3                            Braund, Mr. Owen Harris   \n",
-       "1            2       1  Cumings, Mrs. John Bradley (Florence Briggs Th...   \n",
-       "2            3       3                             Heikkinen, Miss. Laina   \n",
-       "\n",
-       "      Sex   Age  SibSp  Parch            Ticket     Fare Cabin Embarked  \\\n",
-       "0    male  22.0      1      0         A/5 21171   7.2500   NaN        S   \n",
-       "1  female  38.0      1      0          PC 17599  71.2833   C85        C   \n",
-       "2  female  26.0      0      0  STON/O2. 3101282   7.9250   NaN        S   \n",
-       "\n",
-       "     surname  title Ticket_1 Cabin_1   Ticket_2  \n",
-       "0     Braund     Mr        A       Z    21171.0  \n",
-       "1    Cumings    Mrs       Un       C    17599.0  \n",
-       "2  Heikkinen   Miss       Un       Z  3101282.0  "
-      ]
-     },
-     "execution_count": 191,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "df['Ticket_2'] = pd.to_numeric(df['Ticket_2'],errors='coerce')\n",
-    "df.head(3)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 192,
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "     PassengerId  Pclass                             Name   Sex   Age  SibSp  \\\n",
-      "179          180       3              Leonard, Mr. Lionel  male  36.0      0   \n",
-      "271          272       3     Tornquist, Mr. William Henry  male  25.0      0   \n",
-      "302          303       3  Johnson, Mr. William Cahoone Jr  male  19.0      0   \n",
-      "597          598       3              Johnson, Mr. Alfred  male  49.0      0   \n",
-      "\n",
-      "     Parch Ticket  Fare Cabin Embarked    surname title Ticket_1 Cabin_1  \\\n",
-      "179      0   LINE   0.0  B102        S    Leonard    Mr       Un       B   \n",
-      "271      0   LINE   0.0  B102        S  Tornquist    Mr       Un       B   \n",
-      "302      0   LINE   0.0  B102        S    Johnson    Mr       Un       B   \n",
-      "597      0   LINE   0.0  B102        S    Johnson    Mr       Un       B   \n",
-      "\n",
-      "     Ticket_2  \n",
-      "179       NaN  \n",
-      "271       NaN  \n",
-      "302       NaN  \n",
-      "597       NaN  \n"
-     ]
-    }
-   ],
-   "source": [
-    "print(df[df['Ticket_2'].isna()])"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 193,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/html": [
-       "<div>\n",
-       "<style scoped>\n",
-       "    .dataframe tbody tr th:only-of-type {\n",
-       "        vertical-align: middle;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe tbody tr th {\n",
-       "        vertical-align: top;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe thead th {\n",
-       "        text-align: right;\n",
-       "    }\n",
-       "</style>\n",
-       "<table border=\"1\" class=\"dataframe\">\n",
-       "  <thead>\n",
-       "    <tr style=\"text-align: right;\">\n",
-       "      <th></th>\n",
-       "      <th>PassengerId</th>\n",
-       "      <th>Pclass</th>\n",
-       "      <th>Name</th>\n",
-       "      <th>Sex</th>\n",
-       "      <th>Age</th>\n",
-       "      <th>SibSp</th>\n",
-       "      <th>Parch</th>\n",
-       "      <th>Ticket</th>\n",
-       "      <th>Fare</th>\n",
-       "      <th>Cabin</th>\n",
-       "      <th>Embarked</th>\n",
-       "      <th>surname</th>\n",
-       "      <th>title</th>\n",
-       "      <th>Ticket_1</th>\n",
-       "      <th>Cabin_1</th>\n",
-       "      <th>Ticket_2</th>\n",
-       "    </tr>\n",
-       "  </thead>\n",
-       "  <tbody>\n",
-       "    <tr>\n",
-       "      <th>466</th>\n",
-       "      <td>467</td>\n",
-       "      <td>2</td>\n",
-       "      <td>Campbell, Mr. William</td>\n",
-       "      <td>male</td>\n",
-       "      <td>32.0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>239853</td>\n",
-       "      <td>0.0</td>\n",
-       "      <td>B102</td>\n",
-       "      <td>S</td>\n",
-       "      <td>Campbell</td>\n",
-       "      <td>Mr</td>\n",
-       "      <td>Un</td>\n",
-       "      <td>B</td>\n",
-       "      <td>239853.0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>481</th>\n",
-       "      <td>482</td>\n",
-       "      <td>2</td>\n",
-       "      <td>Frost, Mr. Anthony Wood \"Archie\"</td>\n",
-       "      <td>male</td>\n",
-       "      <td>32.0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>239854</td>\n",
-       "      <td>0.0</td>\n",
-       "      <td>B102</td>\n",
-       "      <td>S</td>\n",
-       "      <td>Frost</td>\n",
-       "      <td>Mr</td>\n",
-       "      <td>Un</td>\n",
-       "      <td>B</td>\n",
-       "      <td>239854.0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>597</th>\n",
-       "      <td>598</td>\n",
-       "      <td>3</td>\n",
-       "      <td>Johnson, Mr. Alfred</td>\n",
-       "      <td>male</td>\n",
-       "      <td>49.0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>LINE</td>\n",
-       "      <td>0.0</td>\n",
-       "      <td>B102</td>\n",
-       "      <td>S</td>\n",
-       "      <td>Johnson</td>\n",
-       "      <td>Mr</td>\n",
-       "      <td>Un</td>\n",
-       "      <td>B</td>\n",
-       "      <td>NaN</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>413</th>\n",
-       "      <td>414</td>\n",
-       "      <td>2</td>\n",
-       "      <td>Cunningham, Mr. Alfred Fleming</td>\n",
-       "      <td>male</td>\n",
-       "      <td>32.0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>239853</td>\n",
-       "      <td>0.0</td>\n",
-       "      <td>B102</td>\n",
-       "      <td>S</td>\n",
-       "      <td>Cunningham</td>\n",
-       "      <td>Mr</td>\n",
-       "      <td>Un</td>\n",
-       "      <td>B</td>\n",
-       "      <td>239853.0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>633</th>\n",
-       "      <td>634</td>\n",
-       "      <td>1</td>\n",
-       "      <td>Parr, Mr. William Henry Marsh</td>\n",
-       "      <td>male</td>\n",
-       "      <td>41.0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>112052</td>\n",
-       "      <td>0.0</td>\n",
-       "      <td>B102</td>\n",
-       "      <td>S</td>\n",
-       "      <td>Parr</td>\n",
-       "      <td>Mr</td>\n",
-       "      <td>Un</td>\n",
-       "      <td>B</td>\n",
-       "      <td>112052.0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>674</th>\n",
-       "      <td>675</td>\n",
-       "      <td>2</td>\n",
-       "      <td>Watson, Mr. Ennis Hastings</td>\n",
-       "      <td>male</td>\n",
-       "      <td>32.0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>239856</td>\n",
-       "      <td>0.0</td>\n",
-       "      <td>B102</td>\n",
-       "      <td>S</td>\n",
-       "      <td>Watson</td>\n",
-       "      <td>Mr</td>\n",
-       "      <td>Un</td>\n",
-       "      <td>B</td>\n",
-       "      <td>239856.0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>266</th>\n",
-       "      <td>1158</td>\n",
-       "      <td>1</td>\n",
-       "      <td>Chisholm, Mr. Roderick Robert Crispin</td>\n",
-       "      <td>male</td>\n",
-       "      <td>41.0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>112051</td>\n",
-       "      <td>0.0</td>\n",
-       "      <td>B102</td>\n",
-       "      <td>S</td>\n",
-       "      <td>Chisholm</td>\n",
-       "      <td>Mr</td>\n",
-       "      <td>Un</td>\n",
-       "      <td>B</td>\n",
-       "      <td>112051.0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>277</th>\n",
-       "      <td>278</td>\n",
-       "      <td>2</td>\n",
-       "      <td>Parkes, Mr. Francis \"Frank\"</td>\n",
-       "      <td>male</td>\n",
-       "      <td>32.0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>239853</td>\n",
-       "      <td>0.0</td>\n",
-       "      <td>B102</td>\n",
-       "      <td>S</td>\n",
-       "      <td>Parkes</td>\n",
-       "      <td>Mr</td>\n",
-       "      <td>Un</td>\n",
-       "      <td>B</td>\n",
-       "      <td>239853.0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>271</th>\n",
-       "      <td>272</td>\n",
-       "      <td>3</td>\n",
-       "      <td>Tornquist, Mr. William Henry</td>\n",
-       "      <td>male</td>\n",
-       "      <td>25.0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>LINE</td>\n",
-       "      <td>0.0</td>\n",
-       "      <td>B102</td>\n",
-       "      <td>S</td>\n",
-       "      <td>Tornquist</td>\n",
-       "      <td>Mr</td>\n",
-       "      <td>Un</td>\n",
-       "      <td>B</td>\n",
-       "      <td>NaN</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>302</th>\n",
-       "      <td>303</td>\n",
-       "      <td>3</td>\n",
-       "      <td>Johnson, Mr. William Cahoone Jr</td>\n",
-       "      <td>male</td>\n",
-       "      <td>19.0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>LINE</td>\n",
-       "      <td>0.0</td>\n",
-       "      <td>B102</td>\n",
-       "      <td>S</td>\n",
-       "      <td>Johnson</td>\n",
-       "      <td>Mr</td>\n",
-       "      <td>Un</td>\n",
-       "      <td>B</td>\n",
-       "      <td>NaN</td>\n",
-       "    </tr>\n",
-       "  </tbody>\n",
-       "</table>\n",
-       "</div>"
-      ],
-      "text/plain": [
-       "     PassengerId  Pclass                                   Name   Sex   Age  \\\n",
-       "466          467       2                  Campbell, Mr. William  male  32.0   \n",
-       "481          482       2       Frost, Mr. Anthony Wood \"Archie\"  male  32.0   \n",
-       "597          598       3                    Johnson, Mr. Alfred  male  49.0   \n",
-       "413          414       2         Cunningham, Mr. Alfred Fleming  male  32.0   \n",
-       "633          634       1          Parr, Mr. William Henry Marsh  male  41.0   \n",
-       "674          675       2             Watson, Mr. Ennis Hastings  male  32.0   \n",
-       "266         1158       1  Chisholm, Mr. Roderick Robert Crispin  male  41.0   \n",
-       "277          278       2            Parkes, Mr. Francis \"Frank\"  male  32.0   \n",
-       "271          272       3           Tornquist, Mr. William Henry  male  25.0   \n",
-       "302          303       3        Johnson, Mr. William Cahoone Jr  male  19.0   \n",
-       "\n",
-       "     SibSp  Parch  Ticket  Fare Cabin Embarked     surname title Ticket_1  \\\n",
-       "466      0      0  239853   0.0  B102        S    Campbell    Mr       Un   \n",
-       "481      0      0  239854   0.0  B102        S       Frost    Mr       Un   \n",
-       "597      0      0    LINE   0.0  B102        S     Johnson    Mr       Un   \n",
-       "413      0      0  239853   0.0  B102        S  Cunningham    Mr       Un   \n",
-       "633      0      0  112052   0.0  B102        S        Parr    Mr       Un   \n",
-       "674      0      0  239856   0.0  B102        S      Watson    Mr       Un   \n",
-       "266      0      0  112051   0.0  B102        S    Chisholm    Mr       Un   \n",
-       "277      0      0  239853   0.0  B102        S      Parkes    Mr       Un   \n",
-       "271      0      0    LINE   0.0  B102        S   Tornquist    Mr       Un   \n",
-       "302      0      0    LINE   0.0  B102        S     Johnson    Mr       Un   \n",
-       "\n",
-       "    Cabin_1  Ticket_2  \n",
-       "466       B  239853.0  \n",
-       "481       B  239854.0  \n",
-       "597       B       NaN  \n",
-       "413       B  239853.0  \n",
-       "633       B  112052.0  \n",
-       "674       B  239856.0  \n",
-       "266       B  112051.0  \n",
-       "277       B  239853.0  \n",
-       "271       B       NaN  \n",
-       "302       B       NaN  "
-      ]
-     },
-     "execution_count": 193,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "df = df.sort_values(by='Fare')\n",
-    "df.head(10)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 194,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "df['Ticket_2'] = df['Ticket_2'].fillna(method='ffill')\n"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 195,
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Empty DataFrame\n",
-      "Columns: [PassengerId, Pclass, Name, Sex, Age, SibSp, Parch, Ticket, Fare, Cabin, Embarked, surname, title, Ticket_1, Cabin_1, Ticket_2]\n",
-      "Index: []\n"
-     ]
-    }
-   ],
-   "source": [
-    "print(df[df['Ticket_2'].isna()])"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 196,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/html": [
-       "<div>\n",
-       "<style scoped>\n",
-       "    .dataframe tbody tr th:only-of-type {\n",
-       "        vertical-align: middle;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe tbody tr th {\n",
-       "        vertical-align: top;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe thead th {\n",
-       "        text-align: right;\n",
-       "    }\n",
-       "</style>\n",
-       "<table border=\"1\" class=\"dataframe\">\n",
-       "  <thead>\n",
-       "    <tr style=\"text-align: right;\">\n",
-       "      <th></th>\n",
-       "      <th>PassengerId</th>\n",
-       "      <th>Pclass</th>\n",
-       "      <th>Name</th>\n",
-       "      <th>Sex</th>\n",
-       "      <th>Age</th>\n",
-       "      <th>SibSp</th>\n",
-       "      <th>Parch</th>\n",
-       "      <th>Ticket</th>\n",
-       "      <th>Fare</th>\n",
-       "      <th>Cabin</th>\n",
-       "      <th>Embarked</th>\n",
-       "      <th>surname</th>\n",
-       "      <th>title</th>\n",
-       "      <th>Ticket_1</th>\n",
-       "      <th>Cabin_1</th>\n",
-       "      <th>Ticket_2</th>\n",
-       "    </tr>\n",
-       "  </thead>\n",
-       "  <tbody>\n",
-       "    <tr>\n",
-       "      <th>0</th>\n",
-       "      <td>1</td>\n",
-       "      <td>3</td>\n",
-       "      <td>Braund, Mr. Owen Harris</td>\n",
-       "      <td>male</td>\n",
-       "      <td>22.0</td>\n",
-       "      <td>1</td>\n",
-       "      <td>0</td>\n",
-       "      <td>A/5 21171</td>\n",
-       "      <td>7.2500</td>\n",
-       "      <td>NaN</td>\n",
-       "      <td>S</td>\n",
-       "      <td>Braund</td>\n",
-       "      <td>Mr</td>\n",
-       "      <td>A</td>\n",
-       "      <td>Z</td>\n",
-       "      <td>21171.0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>1</th>\n",
-       "      <td>2</td>\n",
-       "      <td>1</td>\n",
-       "      <td>Cumings, Mrs. John Bradley (Florence Briggs Th...</td>\n",
-       "      <td>female</td>\n",
-       "      <td>38.0</td>\n",
-       "      <td>1</td>\n",
-       "      <td>0</td>\n",
-       "      <td>PC 17599</td>\n",
-       "      <td>71.2833</td>\n",
-       "      <td>C85</td>\n",
-       "      <td>C</td>\n",
-       "      <td>Cumings</td>\n",
-       "      <td>Mrs</td>\n",
-       "      <td>Un</td>\n",
-       "      <td>C</td>\n",
-       "      <td>17599.0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>2</th>\n",
-       "      <td>3</td>\n",
-       "      <td>3</td>\n",
-       "      <td>Heikkinen, Miss. Laina</td>\n",
-       "      <td>female</td>\n",
-       "      <td>26.0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>STON/O2. 3101282</td>\n",
-       "      <td>7.9250</td>\n",
-       "      <td>NaN</td>\n",
-       "      <td>S</td>\n",
-       "      <td>Heikkinen</td>\n",
-       "      <td>Miss</td>\n",
-       "      <td>Un</td>\n",
-       "      <td>Z</td>\n",
-       "      <td>3101282.0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>3</th>\n",
-       "      <td>4</td>\n",
-       "      <td>1</td>\n",
-       "      <td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td>\n",
-       "      <td>female</td>\n",
-       "      <td>35.0</td>\n",
-       "      <td>1</td>\n",
-       "      <td>0</td>\n",
-       "      <td>113803</td>\n",
-       "      <td>53.1000</td>\n",
-       "      <td>C123</td>\n",
-       "      <td>S</td>\n",
-       "      <td>Futrelle</td>\n",
-       "      <td>Mrs</td>\n",
-       "      <td>Un</td>\n",
-       "      <td>C</td>\n",
-       "      <td>113803.0</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>4</th>\n",
-       "      <td>5</td>\n",
-       "      <td>3</td>\n",
-       "      <td>Allen, Mr. William Henry</td>\n",
-       "      <td>male</td>\n",
-       "      <td>35.0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>373450</td>\n",
-       "      <td>8.0500</td>\n",
-       "      <td>E10</td>\n",
-       "      <td>S</td>\n",
-       "      <td>Allen</td>\n",
-       "      <td>Mr</td>\n",
-       "      <td>Un</td>\n",
-       "      <td>E</td>\n",
-       "      <td>373450.0</td>\n",
-       "    </tr>\n",
-       "  </tbody>\n",
-       "</table>\n",
-       "</div>"
-      ],
-      "text/plain": [
-       "   PassengerId  Pclass                                               Name  \\\n",
-       "0            1       3                            Braund, Mr. Owen Harris   \n",
-       "1            2       1  Cumings, Mrs. John Bradley (Florence Briggs Th...   \n",
-       "2            3       3                             Heikkinen, Miss. Laina   \n",
-       "3            4       1       Futrelle, Mrs. Jacques Heath (Lily May Peel)   \n",
-       "4            5       3                           Allen, Mr. William Henry   \n",
-       "\n",
-       "      Sex   Age  SibSp  Parch            Ticket     Fare Cabin Embarked  \\\n",
-       "0    male  22.0      1      0         A/5 21171   7.2500   NaN        S   \n",
-       "1  female  38.0      1      0          PC 17599  71.2833   C85        C   \n",
-       "2  female  26.0      0      0  STON/O2. 3101282   7.9250   NaN        S   \n",
-       "3  female  35.0      1      0            113803  53.1000  C123        S   \n",
-       "4    male  35.0      0      0            373450   8.0500   E10        S   \n",
-       "\n",
-       "     surname  title Ticket_1 Cabin_1   Ticket_2  \n",
-       "0     Braund     Mr        A       Z    21171.0  \n",
-       "1    Cumings    Mrs       Un       C    17599.0  \n",
-       "2  Heikkinen   Miss       Un       Z  3101282.0  \n",
-       "3   Futrelle    Mrs       Un       C   113803.0  \n",
-       "4      Allen     Mr       Un       E   373450.0  "
-      ]
-     },
-     "execution_count": 196,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "df = df.sort_values(by='PassengerId')\n",
-    "df.head(5)"
    ]
   },
   {
@@ -2424,7 +1567,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 155,
+   "execution_count": 378,
    "metadata": {
     "scrolled": true
    },
@@ -2435,7 +1578,7 @@
        "1014"
       ]
      },
-     "execution_count": 155,
+     "execution_count": 378,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -2446,7 +1589,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 156,
+   "execution_count": 379,
    "metadata": {},
    "outputs": [
     {
@@ -2455,7 +1598,7 @@
        "(248, 147, 281, 186)"
       ]
      },
-     "execution_count": 156,
+     "execution_count": 379,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -2466,7 +1609,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 157,
+   "execution_count": 380,
    "metadata": {
     "scrolled": false
    },
@@ -2581,7 +1724,7 @@
        "2  Heikkinen   Miss       Un  "
       ]
      },
-     "execution_count": 157,
+     "execution_count": 380,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -2606,7 +1749,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 158,
+   "execution_count": 208,
    "metadata": {},
    "outputs": [
     {
@@ -2615,7 +1758,7 @@
        "112"
       ]
      },
-     "execution_count": 158,
+     "execution_count": 208,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -2635,7 +1778,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 159,
+   "execution_count": 209,
    "metadata": {},
    "outputs": [
     {
@@ -2755,7 +1898,7 @@
        " 512.3292: 'B51 B53 B55'}"
       ]
      },
-     "execution_count": 159,
+     "execution_count": 209,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -2768,7 +1911,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 160,
+   "execution_count": 210,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -2777,7 +1920,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 161,
+   "execution_count": 211,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -2786,7 +1929,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 162,
+   "execution_count": 212,
    "metadata": {},
    "outputs": [
     {
@@ -2795,7 +1938,7 @@
        "674"
       ]
      },
-     "execution_count": 162,
+     "execution_count": 212,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -2828,7 +1971,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 163,
+   "execution_count": 213,
    "metadata": {
     "scrolled": true
    },
@@ -2905,7 +2048,7 @@
        "      <td>C</td>\n",
        "      <td>Cumings</td>\n",
        "      <td>Mrs</td>\n",
-       "      <td>Un</td>\n",
+       "      <td>PC</td>\n",
        "      <td>C</td>\n",
        "    </tr>\n",
        "    <tr>\n",
@@ -2943,11 +2086,11 @@
        "\n",
        "     surname  title Ticket_1 Cabin_1  \n",
        "0     Braund     Mr        A     NaN  \n",
-       "1    Cumings    Mrs       Un       C  \n",
+       "1    Cumings    Mrs       PC       C  \n",
        "2  Heikkinen   Miss       Un     NaN  "
       ]
      },
-     "execution_count": 163,
+     "execution_count": 213,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -2960,7 +2103,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 164,
+   "execution_count": 214,
    "metadata": {
     "scrolled": true
    },
@@ -2971,57 +2114,13 @@
        "array([nan, 'C', 'E', 'G', 'F', 'D', 'A', 'B', 'T'], dtype=object)"
       ]
      },
-     "execution_count": 164,
+     "execution_count": 214,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
    "source": [
     "df['Cabin_1'].unique()"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 165,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "array(['Z', 'C', 'E', 'G', 'F', 'D', 'A', 'B', 'T'], dtype=object)"
-      ]
-     },
-     "execution_count": 165,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "df['Cabin_1'] = df['Cabin_1'].fillna('Z')\n",
-    "df['Cabin_1'].unique()"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "****** imputing missing values???????"
    ]
   },
   {
@@ -3144,8 +2243,8 @@
     }
    ],
    "source": [
-    "# df = df.sort_values(by='Fare')\n",
-    "# df.head(3)"
+    "df = df.sort_values(by='Fare')\n",
+    "df.head(3)"
    ]
   },
   {
@@ -3165,8 +2264,8 @@
     }
    ],
    "source": [
-    "# df['Cabin_1'] = df['Cabin_1'].fillna(method='ffill')\n",
-    "# df['Cabin_1'].isnull().sum()"
+    "df['Cabin_1'] = df['Cabin_1'].fillna(method='ffill')\n",
+    "df['Cabin_1'].isnull().sum()"
    ]
   },
   {
@@ -3294,8 +2393,8 @@
     }
    ],
    "source": [
-    "# df = df.sort_values(by='PassengerId')\n",
-    "# df.head(3)"
+    "df = df.sort_values(by='PassengerId')\n",
+    "df.head(3)"
    ]
   },
   {
@@ -3455,7 +2554,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 176,
+   "execution_count": 219,
    "metadata": {},
    "outputs": [
     {
@@ -3466,9 +2565,9 @@
       "61            62       1                        Icard, Miss. Amelie  female   \n",
       "829          830       1  Stone, Mrs. George Nelson (Martha Evelyn)  female   \n",
       "\n",
-      "      Age  SibSp  Parch  Ticket  Fare Cabin Embarked surname  title  Ticket_1  \\\n",
-      "61   38.0      0      0  113572  80.0   B28      NaN   Icard   Miss  113572.0   \n",
-      "829  62.0      0      0  113572  80.0   B28      NaN   Stone    Mrs  113572.0   \n",
+      "      Age  SibSp  Parch  Ticket  Fare Cabin Embarked surname  title Ticket_1  \\\n",
+      "61   38.0      0      0  113572  80.0   B28      NaN   Icard   Miss       Un   \n",
+      "829  62.0      0      0  113572  80.0   B28      NaN   Stone    Mrs       Un   \n",
       "\n",
       "    Cabin_1  \n",
       "61        B  \n",
@@ -3489,7 +2588,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 177,
+   "execution_count": 220,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -3498,7 +2597,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 178,
+   "execution_count": 221,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -3507,7 +2606,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 179,
+   "execution_count": 222,
    "metadata": {},
    "outputs": [
     {
@@ -3516,7 +2615,7 @@
        "0"
       ]
      },
-     "execution_count": 179,
+     "execution_count": 222,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -3527,7 +2626,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 180,
+   "execution_count": 223,
    "metadata": {
     "scrolled": true
    },
@@ -3572,76 +2671,81 @@
        "  </thead>\n",
        "  <tbody>\n",
        "    <tr>\n",
-       "      <th>466</th>\n",
-       "      <td>467</td>\n",
-       "      <td>2</td>\n",
-       "      <td>Campbell, Mr. William</td>\n",
-       "      <td>male</td>\n",
-       "      <td>32.0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>239853</td>\n",
-       "      <td>0.0</td>\n",
-       "      <td>B102</td>\n",
-       "      <td>S</td>\n",
-       "      <td>Campbell</td>\n",
-       "      <td>Mr</td>\n",
-       "      <td>239853.0</td>\n",
-       "      <td>B</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>481</th>\n",
-       "      <td>482</td>\n",
-       "      <td>2</td>\n",
-       "      <td>Frost, Mr. Anthony Wood \"Archie\"</td>\n",
-       "      <td>male</td>\n",
-       "      <td>32.0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>239854</td>\n",
-       "      <td>0.0</td>\n",
-       "      <td>B102</td>\n",
-       "      <td>S</td>\n",
-       "      <td>Frost</td>\n",
-       "      <td>Mr</td>\n",
-       "      <td>239854.0</td>\n",
-       "      <td>B</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>597</th>\n",
-       "      <td>598</td>\n",
+       "      <th>0</th>\n",
+       "      <td>1</td>\n",
        "      <td>3</td>\n",
-       "      <td>Johnson, Mr. Alfred</td>\n",
+       "      <td>Braund, Mr. Owen Harris</td>\n",
        "      <td>male</td>\n",
-       "      <td>49.0</td>\n",
+       "      <td>22.0</td>\n",
+       "      <td>1</td>\n",
        "      <td>0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>LINE</td>\n",
-       "      <td>0.0</td>\n",
-       "      <td>B102</td>\n",
+       "      <td>A/5 21171</td>\n",
+       "      <td>7.2500</td>\n",
+       "      <td>NaN</td>\n",
        "      <td>S</td>\n",
-       "      <td>Johnson</td>\n",
+       "      <td>Braund</td>\n",
        "      <td>Mr</td>\n",
-       "      <td>239854.0</td>\n",
-       "      <td>B</td>\n",
+       "      <td>A</td>\n",
+       "      <td>F</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>2</td>\n",
+       "      <td>1</td>\n",
+       "      <td>Cumings, Mrs. John Bradley (Florence Briggs Th...</td>\n",
+       "      <td>female</td>\n",
+       "      <td>38.0</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>PC 17599</td>\n",
+       "      <td>71.2833</td>\n",
+       "      <td>C85</td>\n",
+       "      <td>C</td>\n",
+       "      <td>Cumings</td>\n",
+       "      <td>Mrs</td>\n",
+       "      <td>PC</td>\n",
+       "      <td>C</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>3</td>\n",
+       "      <td>3</td>\n",
+       "      <td>Heikkinen, Miss. Laina</td>\n",
+       "      <td>female</td>\n",
+       "      <td>26.0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>STON/O2. 3101282</td>\n",
+       "      <td>7.9250</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>S</td>\n",
+       "      <td>Heikkinen</td>\n",
+       "      <td>Miss</td>\n",
+       "      <td>Un</td>\n",
+       "      <td>F</td>\n",
        "    </tr>\n",
        "  </tbody>\n",
        "</table>\n",
        "</div>"
       ],
       "text/plain": [
-       "     PassengerId  Pclass                              Name   Sex   Age  SibSp  \\\n",
-       "466          467       2             Campbell, Mr. William  male  32.0      0   \n",
-       "481          482       2  Frost, Mr. Anthony Wood \"Archie\"  male  32.0      0   \n",
-       "597          598       3               Johnson, Mr. Alfred  male  49.0      0   \n",
+       "   PassengerId  Pclass                                               Name  \\\n",
+       "0            1       3                            Braund, Mr. Owen Harris   \n",
+       "1            2       1  Cumings, Mrs. John Bradley (Florence Briggs Th...   \n",
+       "2            3       3                             Heikkinen, Miss. Laina   \n",
        "\n",
-       "     Parch  Ticket  Fare Cabin Embarked   surname title  Ticket_1 Cabin_1  \n",
-       "466      0  239853   0.0  B102        S  Campbell    Mr  239853.0       B  \n",
-       "481      0  239854   0.0  B102        S     Frost    Mr  239854.0       B  \n",
-       "597      0    LINE   0.0  B102        S   Johnson    Mr  239854.0       B  "
+       "      Sex   Age  SibSp  Parch            Ticket     Fare Cabin Embarked  \\\n",
+       "0    male  22.0      1      0         A/5 21171   7.2500   NaN        S   \n",
+       "1  female  38.0      1      0          PC 17599  71.2833   C85        C   \n",
+       "2  female  26.0      0      0  STON/O2. 3101282   7.9250   NaN        S   \n",
+       "\n",
+       "     surname  title Ticket_1 Cabin_1  \n",
+       "0     Braund     Mr        A       F  \n",
+       "1    Cumings    Mrs       PC       C  \n",
+       "2  Heikkinen   Miss       Un       F  "
       ]
      },
-     "execution_count": 180,
+     "execution_count": 223,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -3673,7 +2777,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 197,
+   "execution_count": 226,
    "metadata": {},
    "outputs": [
     {
@@ -3681,11 +2785,11 @@
       "text/plain": [
        "Index(['PassengerId', 'Pclass', 'Name', 'Sex', 'Age', 'SibSp', 'Parch',\n",
        "       'Ticket', 'Fare', 'Cabin', 'Embarked', 'surname', 'title', 'Ticket_1',\n",
-       "       'Cabin_1', 'Ticket_2'],\n",
+       "       'Cabin_1'],\n",
        "      dtype='object')"
       ]
      },
-     "execution_count": 197,
+     "execution_count": 226,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -3697,7 +2801,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 198,
+   "execution_count": 227,
    "metadata": {},
    "outputs": [
     {
@@ -3736,7 +2840,6 @@
        "      <th>title</th>\n",
        "      <th>Ticket_1</th>\n",
        "      <th>Cabin_1</th>\n",
-       "      <th>Ticket_2</th>\n",
        "    </tr>\n",
        "  </thead>\n",
        "  <tbody>\n",
@@ -3756,8 +2859,7 @@
        "      <td>Braund</td>\n",
        "      <td>Mr</td>\n",
        "      <td>A</td>\n",
-       "      <td>Z</td>\n",
-       "      <td>21171.0</td>\n",
+       "      <td>F</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>1</th>\n",
@@ -3774,9 +2876,8 @@
        "      <td>C</td>\n",
        "      <td>Cumings</td>\n",
        "      <td>Mrs</td>\n",
-       "      <td>Un</td>\n",
+       "      <td>PC</td>\n",
        "      <td>C</td>\n",
-       "      <td>17599.0</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>2</th>\n",
@@ -3794,8 +2895,7 @@
        "      <td>Heikkinen</td>\n",
        "      <td>Miss</td>\n",
        "      <td>Un</td>\n",
-       "      <td>Z</td>\n",
-       "      <td>3101282.0</td>\n",
+       "      <td>F</td>\n",
        "    </tr>\n",
        "  </tbody>\n",
        "</table>\n",
@@ -3812,13 +2912,13 @@
        "1  female  38.0      1      0          PC 17599  71.2833   C85        C   \n",
        "2  female  26.0      0      0  STON/O2. 3101282   7.9250   NaN        S   \n",
        "\n",
-       "     surname  title Ticket_1 Cabin_1   Ticket_2  \n",
-       "0     Braund     Mr        A       Z    21171.0  \n",
-       "1    Cumings    Mrs       Un       C    17599.0  \n",
-       "2  Heikkinen   Miss       Un       Z  3101282.0  "
+       "     surname  title Ticket_1 Cabin_1  \n",
+       "0     Braund     Mr        A       F  \n",
+       "1    Cumings    Mrs       PC       C  \n",
+       "2  Heikkinen   Miss       Un       F  "
       ]
      },
-     "execution_count": 198,
+     "execution_count": 227,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -3829,7 +2929,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 199,
+   "execution_count": 228,
    "metadata": {},
    "outputs": [
     {
@@ -3863,7 +2963,6 @@
        "      <th>title</th>\n",
        "      <th>Ticket_1</th>\n",
        "      <th>Cabin_1</th>\n",
-       "      <th>Ticket_2</th>\n",
        "    </tr>\n",
        "  </thead>\n",
        "  <tbody>\n",
@@ -3878,8 +2977,7 @@
        "      <td>S</td>\n",
        "      <td>Mr</td>\n",
        "      <td>A</td>\n",
-       "      <td>Z</td>\n",
-       "      <td>21171.0</td>\n",
+       "      <td>F</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>1</th>\n",
@@ -3891,9 +2989,8 @@
        "      <td>71.2833</td>\n",
        "      <td>C</td>\n",
        "      <td>Mrs</td>\n",
-       "      <td>Un</td>\n",
+       "      <td>PC</td>\n",
        "      <td>C</td>\n",
-       "      <td>17599.0</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>2</th>\n",
@@ -3906,8 +3003,7 @@
        "      <td>S</td>\n",
        "      <td>Miss</td>\n",
        "      <td>Un</td>\n",
-       "      <td>Z</td>\n",
-       "      <td>3101282.0</td>\n",
+       "      <td>F</td>\n",
        "    </tr>\n",
        "  </tbody>\n",
        "</table>\n",
@@ -3916,16 +3012,16 @@
       "text/plain": [
        "   Pclass     Sex   Age  SibSp  Parch     Fare Embarked  title Ticket_1  \\\n",
        "0       3    male  22.0      1      0   7.2500        S     Mr        A   \n",
-       "1       1  female  38.0      1      0  71.2833        C    Mrs       Un   \n",
+       "1       1  female  38.0      1      0  71.2833        C    Mrs       PC   \n",
        "2       3  female  26.0      0      0   7.9250        S   Miss       Un   \n",
        "\n",
-       "  Cabin_1   Ticket_2  \n",
-       "0       Z    21171.0  \n",
-       "1       C    17599.0  \n",
-       "2       Z  3101282.0  "
+       "  Cabin_1  \n",
+       "0       F  \n",
+       "1       C  \n",
+       "2       F  "
       ]
      },
-     "execution_count": 199,
+     "execution_count": 228,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -3937,21 +3033,21 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 200,
+   "execution_count": 231,
    "metadata": {},
    "outputs": [],
    "source": [
-    "df = pd.concat([df,pd.get_drummies(df['Embarked'], prefix='Embarked')],axis=1)\n",
-    "df = pd.concat([df,pd.get_drummies(df['title'], prefix='title')],axis=1)\n",
-    "df = pd.concat([df,pd.get_drummies(df['Ticket_1'], prefix='ticket')],axis=1)\n",
+    "df = pd.concat([df,pd.get_dummies(df['Embarked'], prefix='Embarked')],axis=1)\n",
+    "df = pd.concat([df,pd.get_dummies(df['title'], prefix='title')],axis=1)\n",
+    "df = pd.concat([df,pd.get_dummies(df['Ticket_1'], prefix='ticket')],axis=1)\n",
     "df['Sex'] = df['Sex'].apply(lambda x: 1 if x == 'female' else 0)\n",
-    "df = pd.concat([df,pd.get_drummies(df['Cabin_1'], prefix='Cabin')],axis=1)\n",
-    "df = pd.concat([df,pd.get_drummies(df['Pclass'], prefix='Pclass')],axis=1)"
+    "df = pd.concat([df,pd.get_dummies(df['Cabin_1'], prefix='Cabin')],axis=1)\n",
+    "df = pd.concat([df,pd.get_dummies(df['Pclass'], prefix='Pclass')],axis=1)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 201,
+   "execution_count": 230,
    "metadata": {},
    "outputs": [
     {
@@ -3980,19 +3076,19 @@
        "      <th>SibSp</th>\n",
        "      <th>Parch</th>\n",
        "      <th>Fare</th>\n",
-       "      <th>Ticket_2</th>\n",
        "      <th>Embarked_C</th>\n",
        "      <th>Embarked_Q</th>\n",
        "      <th>Embarked_S</th>\n",
        "      <th>title_ Capt</th>\n",
+       "      <th>title_ Col</th>\n",
        "      <th>...</th>\n",
+       "      <th>Cabin_B</th>\n",
        "      <th>Cabin_C</th>\n",
        "      <th>Cabin_D</th>\n",
        "      <th>Cabin_E</th>\n",
        "      <th>Cabin_F</th>\n",
        "      <th>Cabin_G</th>\n",
        "      <th>Cabin_T</th>\n",
-       "      <th>Cabin_Z</th>\n",
        "      <th>Pclass_1</th>\n",
        "      <th>Pclass_2</th>\n",
        "      <th>Pclass_3</th>\n",
@@ -4006,19 +3102,19 @@
        "      <td>1</td>\n",
        "      <td>0</td>\n",
        "      <td>7.2500</td>\n",
-       "      <td>21171.0</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
        "      <td>1</td>\n",
+       "      <td>0</td>\n",
        "      <td>0</td>\n",
        "      <td>...</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>0</td>\n",
        "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
        "      <td>1</td>\n",
@@ -4030,14 +3126,14 @@
        "      <td>1</td>\n",
        "      <td>0</td>\n",
        "      <td>71.2833</td>\n",
-       "      <td>17599.0</td>\n",
        "      <td>1</td>\n",
+       "      <td>0</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
        "      <td>...</td>\n",
-       "      <td>1</td>\n",
        "      <td>0</td>\n",
+       "      <td>1</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
@@ -4054,48 +3150,48 @@
        "      <td>0</td>\n",
        "      <td>0</td>\n",
        "      <td>7.9250</td>\n",
-       "      <td>3101282.0</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
        "      <td>1</td>\n",
+       "      <td>0</td>\n",
        "      <td>0</td>\n",
        "      <td>...</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>0</td>\n",
        "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
        "      <td>0</td>\n",
        "      <td>0</td>\n",
        "      <td>1</td>\n",
        "    </tr>\n",
        "  </tbody>\n",
        "</table>\n",
-       "<p>3 rows × 48 columns</p>\n",
+       "<p>3 rows × 51 columns</p>\n",
        "</div>"
       ],
       "text/plain": [
-       "   Sex   Age  SibSp  Parch     Fare   Ticket_2  Embarked_C  Embarked_Q  \\\n",
-       "0    0  22.0      1      0   7.2500    21171.0           0           0   \n",
-       "1    1  38.0      1      0  71.2833    17599.0           1           0   \n",
-       "2    1  26.0      0      0   7.9250  3101282.0           0           0   \n",
+       "   Sex   Age  SibSp  Parch     Fare  Embarked_C  Embarked_Q  Embarked_S  \\\n",
+       "0    0  22.0      1      0   7.2500           0           0           1   \n",
+       "1    1  38.0      1      0  71.2833           1           0           0   \n",
+       "2    1  26.0      0      0   7.9250           0           0           1   \n",
        "\n",
-       "   Embarked_S  title_ Capt  ...  Cabin_C  Cabin_D  Cabin_E  Cabin_F  Cabin_G  \\\n",
-       "0           1            0  ...        0        0        0        0        0   \n",
-       "1           0            0  ...        1        0        0        0        0   \n",
-       "2           1            0  ...        0        0        0        0        0   \n",
+       "   title_ Capt  title_ Col  ...  Cabin_B  Cabin_C  Cabin_D  Cabin_E  Cabin_F  \\\n",
+       "0            0           0  ...        0        0        0        0        1   \n",
+       "1            0           0  ...        0        1        0        0        0   \n",
+       "2            0           0  ...        0        0        0        0        1   \n",
        "\n",
-       "   Cabin_T  Cabin_Z  Pclass_1  Pclass_2  Pclass_3  \n",
-       "0        0        1         0         0         1  \n",
+       "   Cabin_G  Cabin_T  Pclass_1  Pclass_2  Pclass_3  \n",
+       "0        0        0         0         0         1  \n",
        "1        0        0         1         0         0  \n",
-       "2        0        1         0         0         1  \n",
+       "2        0        0         0         0         1  \n",
        "\n",
-       "[3 rows x 48 columns]"
+       "[3 rows x 51 columns]"
       ]
      },
-     "execution_count": 201,
+     "execution_count": 230,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -4107,26 +3203,26 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 202,
+   "execution_count": 232,
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "Index(['Sex', 'Age', 'SibSp', 'Parch', 'Fare', 'Ticket_2', 'Embarked_C',\n",
-       "       'Embarked_Q', 'Embarked_S', 'title_ Capt', 'title_ Col', 'title_ Don',\n",
-       "       'title_ Dona', 'title_ Dr', 'title_ Jonkheer', 'title_ Lady',\n",
-       "       'title_ Major', 'title_ Master', 'title_ Miss', 'title_ Mlle',\n",
-       "       'title_ Mme', 'title_ Mr', 'title_ Mrs', 'title_ Ms', 'title_ Rev',\n",
-       "       'title_ Sir', 'title_ the Countess', 'ticket_A', 'ticket_CA',\n",
-       "       'ticket_S', 'ticket_SCO', 'ticket_SO', 'ticket_SOTON', 'ticket_SW',\n",
-       "       'ticket_Un', 'ticket_W', 'Cabin_A', 'Cabin_B', 'Cabin_C', 'Cabin_D',\n",
-       "       'Cabin_E', 'Cabin_F', 'Cabin_G', 'Cabin_T', 'Cabin_Z', 'Pclass_1',\n",
-       "       'Pclass_2', 'Pclass_3'],\n",
+       "Index(['Sex', 'Age', 'SibSp', 'Parch', 'Fare', 'Embarked_C', 'Embarked_Q',\n",
+       "       'Embarked_S', 'title_ Capt', 'title_ Col', 'title_ Don', 'title_ Dona',\n",
+       "       'title_ Dr', 'title_ Jonkheer', 'title_ Lady', 'title_ Major',\n",
+       "       'title_ Master', 'title_ Miss', 'title_ Mlle', 'title_ Mme',\n",
+       "       'title_ Mr', 'title_ Mrs', 'title_ Ms', 'title_ Rev', 'title_ Sir',\n",
+       "       'title_ the Countess', 'ticket_A', 'ticket_AQ', 'ticket_CA',\n",
+       "       'ticket_LINE', 'ticket_LP', 'ticket_PC', 'ticket_PP', 'ticket_S',\n",
+       "       'ticket_SCO', 'ticket_SO', 'ticket_SOTON', 'ticket_SW', 'ticket_Un',\n",
+       "       'ticket_W', 'Cabin_A', 'Cabin_B', 'Cabin_C', 'Cabin_D', 'Cabin_E',\n",
+       "       'Cabin_F', 'Cabin_G', 'Cabin_T', 'Pclass_1', 'Pclass_2', 'Pclass_3'],\n",
        "      dtype='object')"
       ]
      },
-     "execution_count": 202,
+     "execution_count": 232,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -4144,7 +3240,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 203,
+   "execution_count": 235,
    "metadata": {},
    "outputs": [
     {
@@ -4155,7 +3251,6 @@
        "SibSp                  False\n",
        "Parch                  False\n",
        "Fare                   False\n",
-       "Ticket_2               False\n",
        "Embarked_C             False\n",
        "Embarked_Q             False\n",
        "Embarked_S             False\n",
@@ -4178,7 +3273,12 @@
        "title_ Sir             False\n",
        "title_ the Countess    False\n",
        "ticket_A               False\n",
+       "ticket_AQ              False\n",
        "ticket_CA              False\n",
+       "ticket_LINE            False\n",
+       "ticket_LP              False\n",
+       "ticket_PC              False\n",
+       "ticket_PP              False\n",
        "ticket_S               False\n",
        "ticket_SCO             False\n",
        "ticket_SO              False\n",
@@ -4194,14 +3294,13 @@
        "Cabin_F                False\n",
        "Cabin_G                False\n",
        "Cabin_T                False\n",
-       "Cabin_Z                False\n",
        "Pclass_1               False\n",
        "Pclass_2               False\n",
        "Pclass_3               False\n",
        "dtype: bool"
       ]
      },
-     "execution_count": 203,
+     "execution_count": 235,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -4240,16 +3339,16 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 205,
+   "execution_count": 1037,
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "((891, 12), (1309, 48))"
+       "((891, 13), (1309, 38))"
       ]
      },
-     "execution_count": 205,
+     "execution_count": 1037,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -4260,16 +3359,16 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 206,
+   "execution_count": 1038,
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "((891, 48), (891,), (418, 48))"
+       "((891, 38), (891,), (418, 38))"
       ]
      },
-     "execution_count": 206,
+     "execution_count": 1038,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -4300,7 +3399,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 207,
+   "execution_count": 1039,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -4312,7 +3411,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 208,
+   "execution_count": 1040,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -4326,7 +3425,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 209,
+   "execution_count": 1041,
    "metadata": {},
    "outputs": [
     {
@@ -4334,17 +3433,17 @@
      "output_type": "stream",
      "text": [
       "Confusion Matrix:\n",
-      "[[147  23]\n",
-      " [ 35  63]]\n",
+      "[[163  17]\n",
+      " [ 26  62]]\n",
       "Classification Report\n",
       "              precision    recall  f1-score   support\n",
       "\n",
-      "           0       0.81      0.86      0.84       170\n",
-      "           1       0.73      0.64      0.68        98\n",
+      "           0       0.86      0.91      0.88       180\n",
+      "           1       0.78      0.70      0.74        88\n",
       "\n",
-      "    accuracy                           0.78       268\n",
-      "   macro avg       0.77      0.75      0.76       268\n",
-      "weighted avg       0.78      0.78      0.78       268\n",
+      "    accuracy                           0.84       268\n",
+      "   macro avg       0.82      0.81      0.81       268\n",
+      "weighted avg       0.84      0.84      0.84       268\n",
       "\n"
      ]
     }
@@ -4420,34 +3519,34 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 115,
+   "execution_count": 939,
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "array([0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1,\n",
-       "       1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1,\n",
-       "       1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1,\n",
-       "       1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0,\n",
-       "       1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0,\n",
-       "       1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0,\n",
-       "       0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1,\n",
-       "       0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1,\n",
-       "       1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0,\n",
-       "       0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0,\n",
-       "       1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1,\n",
-       "       0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1,\n",
-       "       0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0,\n",
-       "       0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1,\n",
-       "       0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0,\n",
-       "       1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0,\n",
-       "       0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0,\n",
-       "       1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1,\n",
-       "       0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1])"
+       "array([0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1,\n",
+       "       1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,\n",
+       "       1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1,\n",
+       "       1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1,\n",
+       "       0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0,\n",
+       "       0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0,\n",
+       "       0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0,\n",
+       "       0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1,\n",
+       "       1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0,\n",
+       "       0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0,\n",
+       "       1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1,\n",
+       "       1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1,\n",
+       "       0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0,\n",
+       "       0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1,\n",
+       "       0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0,\n",
+       "       1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0,\n",
+       "       0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0,\n",
+       "       1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1,\n",
+       "       0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1])"
       ]
      },
-     "execution_count": 115,
+     "execution_count": 939,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -4458,7 +3557,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 116,
+   "execution_count": 337,
    "metadata": {},
    "outputs": [
     {
@@ -4525,7 +3624,7 @@
        "      <td>7.0000</td>\n",
        "      <td>NaN</td>\n",
        "      <td>S</td>\n",
-       "      <td>1</td>\n",
+       "      <td>0</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>2</th>\n",
@@ -4554,11 +3653,11 @@
        "\n",
        "   Parch  Ticket    Fare Cabin Embarked  Survived  \n",
        "0      0  330911  7.8292   NaN        Q         0  \n",
-       "1      0  363272  7.0000   NaN        S         1  \n",
+       "1      0  363272  7.0000   NaN        S         0  \n",
        "2      0  240276  9.6875   NaN        Q         0  "
       ]
      },
-     "execution_count": 116,
+     "execution_count": 337,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -4570,7 +3669,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 117,
+   "execution_count": 338,
    "metadata": {},
    "outputs": [
     {
@@ -4607,7 +3706,7 @@
        "    <tr>\n",
        "      <th>1</th>\n",
        "      <td>893</td>\n",
-       "      <td>1</td>\n",
+       "      <td>0</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>2</th>\n",
@@ -4617,12 +3716,12 @@
        "    <tr>\n",
        "      <th>3</th>\n",
        "      <td>895</td>\n",
-       "      <td>1</td>\n",
+       "      <td>0</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>4</th>\n",
        "      <td>896</td>\n",
-       "      <td>0</td>\n",
+       "      <td>1</td>\n",
        "    </tr>\n",
        "  </tbody>\n",
        "</table>\n",
@@ -4631,13 +3730,13 @@
       "text/plain": [
        "   PassengerId  Survived\n",
        "0          892         0\n",
-       "1          893         1\n",
+       "1          893         0\n",
        "2          894         0\n",
-       "3          895         1\n",
-       "4          896         0"
+       "3          895         0\n",
+       "4          896         1"
       ]
      },
-     "execution_count": 117,
+     "execution_count": 338,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -4649,7 +3748,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 118,
+   "execution_count": 339,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -4658,7 +3757,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 119,
+   "execution_count": 340,
    "metadata": {},
    "outputs": [
     {
@@ -4696,7 +3795,7 @@
        "    </tr>\n",
        "    <tr>\n",
        "      <th>893</th>\n",
-       "      <td>1</td>\n",
+       "      <td>0</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>894</th>\n",
@@ -4710,11 +3809,11 @@
        "             Survived\n",
        "PassengerId          \n",
        "892                 0\n",
-       "893                 1\n",
+       "893                 0\n",
        "894                 0"
       ]
      },
-     "execution_count": 119,
+     "execution_count": 340,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -4725,20 +3824,20 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 120,
+   "execution_count": 341,
    "metadata": {},
    "outputs": [],
    "source": [
-    "write1 = pred.to_csv('./data/fea2.csv')"
+    "write1 = pred.to_csv('./data/fea1.csv')"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 121,
+   "execution_count": 342,
    "metadata": {},
    "outputs": [],
    "source": [
-    "test1 = pd.read_csv('./data/fea2.csv',index_col=0)\n",
+    "test1 = pd.read_csv('./data/fea1.csv',index_col=0)\n",
     "\n",
     "# lgb2 = all except ticket features as the share in test set is not the same. \n",
     "# lgb1 = all features (ticket_1,_2,cabin_1,etc)\n",
@@ -4747,7 +3846,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 122,
+   "execution_count": 343,
    "metadata": {},
    "outputs": [
     {
@@ -4785,7 +3884,7 @@
        "    </tr>\n",
        "    <tr>\n",
        "      <th>893</th>\n",
-       "      <td>1</td>\n",
+       "      <td>0</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>894</th>\n",
@@ -4799,11 +3898,11 @@
        "             Survived\n",
        "PassengerId          \n",
        "892                 0\n",
-       "893                 1\n",
+       "893                 0\n",
        "894                 0"
       ]
      },
-     "execution_count": 122,
+     "execution_count": 343,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -4918,7 +4017,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 210,
+   "execution_count": 237,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -4928,16 +4027,16 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 211,
+   "execution_count": 238,
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "((891, 48), (891,), (418, 48))"
+       "((891, 51), (891,), (418, 51))"
       ]
      },
-     "execution_count": 211,
+     "execution_count": 238,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -4959,19 +4058,19 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 242,
+   "execution_count": 327,
    "metadata": {},
    "outputs": [],
    "source": [
     "# Import module to split dataset\n",
     "from sklearn.model_selection import train_test_split\n",
     "# Split data set into training and test sets\n",
-    "x_train1, x_test1, y_train1, y_test1 = train_test_split(x_train, y_train, test_size=0.3)"
+    "x_train1, x_test1, y_train1, y_test1 = train_test_split(x_train, y_train, test_size=0.25)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 243,
+   "execution_count": 328,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -4992,272 +4091,152 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 248,
+   "execution_count": 329,
    "metadata": {},
    "outputs": [],
    "source": [
     "model = LGBMClassifier(\n",
     "#         boosting = 'dart',\n",
-    "        objective='binary', lass_weight = 'balanced', metrics ='auc', n_jobs=-1, n_estimators=1,\n",
-    "        learning_rate=0.22, num_leaves=150, max_depth = 65, num_iterations = 250, verbose=-1, random_state=42)"
+    "        objective='binary', lass_weight = 'balanced', metrics ='auc', n_jobs=-1, n_estimators=35,\n",
+    "        learning_rate=0.22, num_leaves=100,max_depth =25, num_iterations = 250, verbose=-1, random_state=42)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 249,
+   "execution_count": 330,
    "metadata": {},
    "outputs": [
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "[1]\tvalid_0's auc: 0.845325\n",
-      "Training until validation scores don't improve for 200 rounds\n",
-      "[2]\tvalid_0's auc: 0.854156\n",
-      "[3]\tvalid_0's auc: 0.85357\n",
-      "[4]\tvalid_0's auc: 0.853848\n",
-      "[5]\tvalid_0's auc: 0.856905\n",
-      "[6]\tvalid_0's auc: 0.848258\n",
-      "[7]\tvalid_0's auc: 0.846745\n",
-      "[8]\tvalid_0's auc: 0.848228\n",
-      "[9]\tvalid_0's auc: 0.847857\n",
-      "[10]\tvalid_0's auc: 0.849926\n",
-      "[11]\tvalid_0's auc: 0.852859\n",
-      "[12]\tvalid_0's auc: 0.850821\n",
-      "[13]\tvalid_0's auc: 0.85113\n",
-      "[14]\tvalid_0's auc: 0.853384\n",
-      "[15]\tvalid_0's auc: 0.853354\n",
-      "[16]\tvalid_0's auc: 0.858078\n",
-      "[17]\tvalid_0's auc: 0.861413\n",
-      "[18]\tvalid_0's auc: 0.863019\n",
-      "[19]\tvalid_0's auc: 0.861845\n",
-      "[20]\tvalid_0's auc: 0.864254\n",
-      "[21]\tvalid_0's auc: 0.865119\n",
-      "[22]\tvalid_0's auc: 0.865983\n",
-      "[23]\tvalid_0's auc: 0.86481\n",
-      "[24]\tvalid_0's auc: 0.863513\n",
-      "[25]\tvalid_0's auc: 0.864069\n",
-      "[26]\tvalid_0's auc: 0.863636\n",
-      "[27]\tvalid_0's auc: 0.863544\n",
-      "[28]\tvalid_0's auc: 0.865458\n",
-      "[29]\tvalid_0's auc: 0.863544\n",
-      "[30]\tvalid_0's auc: 0.86305\n",
-      "[31]\tvalid_0's auc: 0.863544\n",
-      "[32]\tvalid_0's auc: 0.863976\n",
-      "[33]\tvalid_0's auc: 0.864594\n",
-      "[34]\tvalid_0's auc: 0.863667\n",
-      "[35]\tvalid_0's auc: 0.863667\n",
-      "[36]\tvalid_0's auc: 0.863729\n",
-      "[37]\tvalid_0's auc: 0.866693\n",
-      "[38]\tvalid_0's auc: 0.864161\n",
-      "[39]\tvalid_0's auc: 0.862926\n",
-      "[40]\tvalid_0's auc: 0.863667\n",
-      "[41]\tvalid_0's auc: 0.863544\n",
-      "[42]\tvalid_0's auc: 0.862123\n",
-      "[43]\tvalid_0's auc: 0.863235\n",
-      "[44]\tvalid_0's auc: 0.863605\n",
-      "[45]\tvalid_0's auc: 0.865458\n",
-      "[46]\tvalid_0's auc: 0.865273\n",
-      "[47]\tvalid_0's auc: 0.866014\n",
-      "[48]\tvalid_0's auc: 0.86447\n",
-      "[49]\tvalid_0's auc: 0.863235\n",
-      "[50]\tvalid_0's auc: 0.862864\n",
-      "[51]\tvalid_0's auc: 0.862679\n",
-      "[52]\tvalid_0's auc: 0.863729\n",
-      "[53]\tvalid_0's auc: 0.863173\n",
-      "[54]\tvalid_0's auc: 0.861382\n",
-      "[55]\tvalid_0's auc: 0.861567\n",
-      "[56]\tvalid_0's auc: 0.861197\n",
-      "[57]\tvalid_0's auc: 0.859776\n",
-      "[58]\tvalid_0's auc: 0.858912\n",
-      "[59]\tvalid_0's auc: 0.858479\n",
-      "[60]\tvalid_0's auc: 0.859962\n",
-      "[61]\tvalid_0's auc: 0.860271\n",
-      "[62]\tvalid_0's auc: 0.858788\n",
-      "[63]\tvalid_0's auc: 0.859282\n",
-      "[64]\tvalid_0's auc: 0.860085\n",
-      "[65]\tvalid_0's auc: 0.860703\n",
-      "[66]\tvalid_0's auc: 0.860271\n",
-      "[67]\tvalid_0's auc: 0.859962\n",
-      "[68]\tvalid_0's auc: 0.859406\n",
-      "[69]\tvalid_0's auc: 0.861382\n",
-      "[70]\tvalid_0's auc: 0.860579\n",
-      "[71]\tvalid_0's auc: 0.859591\n",
-      "[72]\tvalid_0's auc: 0.858912\n",
-      "[73]\tvalid_0's auc: 0.860518\n",
-      "[74]\tvalid_0's auc: 0.859529\n",
-      "[75]\tvalid_0's auc: 0.858912\n",
-      "[76]\tvalid_0's auc: 0.861197\n",
-      "[77]\tvalid_0's auc: 0.859591\n",
-      "[78]\tvalid_0's auc: 0.859159\n",
-      "[79]\tvalid_0's auc: 0.858047\n",
-      "[80]\tvalid_0's auc: 0.860641\n",
-      "[81]\tvalid_0's auc: 0.859776\n",
-      "[82]\tvalid_0's auc: 0.859468\n",
-      "[83]\tvalid_0's auc: 0.858788\n",
-      "[84]\tvalid_0's auc: 0.858603\n",
-      "[85]\tvalid_0's auc: 0.858356\n",
-      "[86]\tvalid_0's auc: 0.856627\n",
-      "[87]\tvalid_0's auc: 0.856256\n",
-      "[88]\tvalid_0's auc: 0.856812\n",
-      "[89]\tvalid_0's auc: 0.857306\n",
-      "[90]\tvalid_0's auc: 0.857244\n",
-      "[91]\tvalid_0's auc: 0.857677\n",
-      "[92]\tvalid_0's auc: 0.858109\n",
-      "[93]\tvalid_0's auc: 0.856627\n",
-      "[94]\tvalid_0's auc: 0.857491\n",
-      "[95]\tvalid_0's auc: 0.856194\n",
-      "[96]\tvalid_0's auc: 0.856194\n",
-      "[97]\tvalid_0's auc: 0.855824\n",
-      "[98]\tvalid_0's auc: 0.855639\n",
-      "[99]\tvalid_0's auc: 0.854342\n",
-      "[100]\tvalid_0's auc: 0.855206\n",
-      "[101]\tvalid_0's auc: 0.855206\n",
-      "[102]\tvalid_0's auc: 0.855083\n",
-      "[103]\tvalid_0's auc: 0.855392\n",
-      "[104]\tvalid_0's auc: 0.855206\n",
-      "[105]\tvalid_0's auc: 0.854959\n",
-      "[106]\tvalid_0's auc: 0.85465\n",
-      "[107]\tvalid_0's auc: 0.854712\n",
-      "[108]\tvalid_0's auc: 0.854836\n",
-      "[109]\tvalid_0's auc: 0.854712\n",
-      "[110]\tvalid_0's auc: 0.853415\n",
-      "[111]\tvalid_0's auc: 0.854465\n",
-      "[112]\tvalid_0's auc: 0.854589\n",
-      "[113]\tvalid_0's auc: 0.853477\n",
-      "[114]\tvalid_0's auc: 0.853415\n",
-      "[115]\tvalid_0's auc: 0.854959\n",
-      "[116]\tvalid_0's auc: 0.854589\n",
-      "[117]\tvalid_0's auc: 0.853106\n",
-      "[118]\tvalid_0's auc: 0.854527\n",
-      "[119]\tvalid_0's auc: 0.853786\n",
-      "[120]\tvalid_0's auc: 0.855145\n",
-      "[121]\tvalid_0's auc: 0.854527\n",
-      "[122]\tvalid_0's auc: 0.854681\n",
-      "[123]\tvalid_0's auc: 0.854249\n",
-      "[124]\tvalid_0's auc: 0.854681\n",
-      "[125]\tvalid_0's auc: 0.854373\n",
-      "[126]\tvalid_0's auc: 0.854187\n",
-      "[127]\tvalid_0's auc: 0.854928\n",
-      "[128]\tvalid_0's auc: 0.855484\n",
-      "[129]\tvalid_0's auc: 0.856225\n",
-      "[130]\tvalid_0's auc: 0.855855\n",
-      "[131]\tvalid_0's auc: 0.855114\n",
-      "[132]\tvalid_0's auc: 0.855237\n",
-      "[133]\tvalid_0's auc: 0.854743\n",
-      "[134]\tvalid_0's auc: 0.855669\n",
-      "[135]\tvalid_0's auc: 0.856287\n",
-      "[136]\tvalid_0's auc: 0.855917\n",
-      "[137]\tvalid_0's auc: 0.855546\n",
-      "[138]\tvalid_0's auc: 0.855669\n",
-      "[139]\tvalid_0's auc: 0.855114\n",
-      "[140]\tvalid_0's auc: 0.854496\n",
-      "[141]\tvalid_0's auc: 0.854681\n",
-      "[142]\tvalid_0's auc: 0.854681\n",
-      "[143]\tvalid_0's auc: 0.854805\n",
-      "[144]\tvalid_0's auc: 0.854805\n",
-      "[145]\tvalid_0's auc: 0.854496\n",
-      "[146]\tvalid_0's auc: 0.85462\n",
-      "[147]\tvalid_0's auc: 0.854805\n",
-      "[148]\tvalid_0's auc: 0.855052\n",
-      "[149]\tvalid_0's auc: 0.854434\n",
-      "[150]\tvalid_0's auc: 0.854002\n",
-      "[151]\tvalid_0's auc: 0.854187\n",
-      "[152]\tvalid_0's auc: 0.854558\n",
-      "[153]\tvalid_0's auc: 0.853878\n",
-      "[154]\tvalid_0's auc: 0.853755\n",
-      "[155]\tvalid_0's auc: 0.854249\n",
-      "[156]\tvalid_0's auc: 0.853446\n",
-      "[157]\tvalid_0's auc: 0.854187\n",
-      "[158]\tvalid_0's auc: 0.85394\n",
-      "[159]\tvalid_0's auc: 0.85462\n",
-      "[160]\tvalid_0's auc: 0.854187\n",
-      "[161]\tvalid_0's auc: 0.855237\n",
-      "[162]\tvalid_0's auc: 0.855052\n",
-      "[163]\tvalid_0's auc: 0.855237\n",
-      "[164]\tvalid_0's auc: 0.855608\n",
-      "[165]\tvalid_0's auc: 0.855731\n",
-      "[166]\tvalid_0's auc: 0.855361\n",
-      "[167]\tvalid_0's auc: 0.854558\n",
-      "[168]\tvalid_0's auc: 0.854867\n",
-      "[169]\tvalid_0's auc: 0.854743\n",
-      "[170]\tvalid_0's auc: 0.855546\n",
-      "[171]\tvalid_0's auc: 0.855237\n",
-      "[172]\tvalid_0's auc: 0.854434\n",
-      "[173]\tvalid_0's auc: 0.855299\n",
-      "[174]\tvalid_0's auc: 0.854867\n",
-      "[175]\tvalid_0's auc: 0.854743\n",
-      "[176]\tvalid_0's auc: 0.854249\n",
-      "[177]\tvalid_0's auc: 0.85394\n",
-      "[178]\tvalid_0's auc: 0.853693\n",
-      "[179]\tvalid_0's auc: 0.853755\n",
-      "[180]\tvalid_0's auc: 0.853817\n",
-      "[181]\tvalid_0's auc: 0.85394\n",
-      "[182]\tvalid_0's auc: 0.854311\n",
-      "[183]\tvalid_0's auc: 0.854928\n",
-      "[184]\tvalid_0's auc: 0.855175\n",
-      "[185]\tvalid_0's auc: 0.854187\n",
-      "[186]\tvalid_0's auc: 0.853323\n",
-      "[187]\tvalid_0's auc: 0.854064\n",
-      "[188]\tvalid_0's auc: 0.853878\n",
-      "[189]\tvalid_0's auc: 0.854249\n",
-      "[190]\tvalid_0's auc: 0.854187\n",
-      "[191]\tvalid_0's auc: 0.855237\n",
-      "[192]\tvalid_0's auc: 0.854805\n",
-      "[193]\tvalid_0's auc: 0.854681\n",
-      "[194]\tvalid_0's auc: 0.854867\n",
-      "[195]\tvalid_0's auc: 0.855299\n",
-      "[196]\tvalid_0's auc: 0.854743\n",
-      "[197]\tvalid_0's auc: 0.855052\n",
-      "[198]\tvalid_0's auc: 0.854496\n",
-      "[199]\tvalid_0's auc: 0.854496\n",
-      "[200]\tvalid_0's auc: 0.854434\n",
-      "[201]\tvalid_0's auc: 0.854805\n",
-      "[202]\tvalid_0's auc: 0.85394\n",
-      "[203]\tvalid_0's auc: 0.854743\n",
-      "[204]\tvalid_0's auc: 0.854805\n",
-      "[205]\tvalid_0's auc: 0.85499\n",
-      "[206]\tvalid_0's auc: 0.854496\n",
-      "[207]\tvalid_0's auc: 0.854064\n",
-      "[208]\tvalid_0's auc: 0.85394\n",
-      "[209]\tvalid_0's auc: 0.854064\n",
-      "[210]\tvalid_0's auc: 0.854002\n",
-      "[211]\tvalid_0's auc: 0.853014\n",
-      "[212]\tvalid_0's auc: 0.853076\n",
-      "[213]\tvalid_0's auc: 0.853261\n",
-      "[214]\tvalid_0's auc: 0.852952\n",
-      "[215]\tvalid_0's auc: 0.852643\n",
-      "[216]\tvalid_0's auc: 0.853261\n",
-      "[217]\tvalid_0's auc: 0.853199\n",
-      "[218]\tvalid_0's auc: 0.85289\n",
-      "[219]\tvalid_0's auc: 0.852643\n",
-      "[220]\tvalid_0's auc: 0.853384\n",
-      "[221]\tvalid_0's auc: 0.854002\n",
-      "[222]\tvalid_0's auc: 0.853817\n",
-      "[223]\tvalid_0's auc: 0.854125\n",
-      "[224]\tvalid_0's auc: 0.853508\n",
-      "[225]\tvalid_0's auc: 0.853446\n",
-      "[226]\tvalid_0's auc: 0.85394\n",
-      "[227]\tvalid_0's auc: 0.854249\n",
-      "[228]\tvalid_0's auc: 0.854187\n",
-      "[229]\tvalid_0's auc: 0.853878\n",
-      "[230]\tvalid_0's auc: 0.853446\n",
-      "[231]\tvalid_0's auc: 0.853508\n",
-      "[232]\tvalid_0's auc: 0.853446\n",
-      "[233]\tvalid_0's auc: 0.853261\n",
-      "[234]\tvalid_0's auc: 0.85394\n",
-      "[235]\tvalid_0's auc: 0.853817\n",
-      "[236]\tvalid_0's auc: 0.854002\n",
-      "[237]\tvalid_0's auc: 0.853631\n",
+      "[1]\tvalid_0's auc: 0.858586\n",
+      "Training until validation scores don't improve for 100 rounds\n",
+      "[2]\tvalid_0's auc: 0.873106\n",
+      "[3]\tvalid_0's auc: 0.879756\n",
+      "[4]\tvalid_0's auc: 0.882492\n",
+      "[5]\tvalid_0's auc: 0.891751\n",
+      "[6]\tvalid_0's auc: 0.895918\n",
+      "[7]\tvalid_0's auc: 0.892382\n",
+      "[8]\tvalid_0's auc: 0.892803\n",
+      "[9]\tvalid_0's auc: 0.892971\n",
+      "[10]\tvalid_0's auc: 0.891414\n",
+      "[11]\tvalid_0's auc: 0.888258\n",
+      "[12]\tvalid_0's auc: 0.89436\n",
+      "[13]\tvalid_0's auc: 0.897264\n",
+      "[14]\tvalid_0's auc: 0.895328\n",
+      "[15]\tvalid_0's auc: 0.899032\n",
+      "[16]\tvalid_0's auc: 0.899369\n",
+      "[17]\tvalid_0's auc: 0.898695\n",
+      "[18]\tvalid_0's auc: 0.899537\n",
+      "[19]\tvalid_0's auc: 0.895076\n",
+      "[20]\tvalid_0's auc: 0.894655\n",
+      "[21]\tvalid_0's auc: 0.896423\n",
+      "[22]\tvalid_0's auc: 0.898106\n",
+      "[23]\tvalid_0's auc: 0.901221\n",
+      "[24]\tvalid_0's auc: 0.902778\n",
+      "[25]\tvalid_0's auc: 0.901094\n",
+      "[26]\tvalid_0's auc: 0.902609\n",
+      "[27]\tvalid_0's auc: 0.902694\n",
+      "[28]\tvalid_0's auc: 0.900589\n",
+      "[29]\tvalid_0's auc: 0.902104\n",
+      "[30]\tvalid_0's auc: 0.901768\n",
+      "[31]\tvalid_0's auc: 0.900253\n",
+      "[32]\tvalid_0's auc: 0.900926\n",
+      "[33]\tvalid_0's auc: 0.899663\n",
+      "[34]\tvalid_0's auc: 0.899411\n",
+      "[35]\tvalid_0's auc: 0.899495\n",
+      "[36]\tvalid_0's auc: 0.899579\n",
+      "[37]\tvalid_0's auc: 0.899158\n",
+      "[38]\tvalid_0's auc: 0.896801\n",
+      "[39]\tvalid_0's auc: 0.895875\n",
+      "[40]\tvalid_0's auc: 0.89537\n",
+      "[41]\tvalid_0's auc: 0.893434\n",
+      "[42]\tvalid_0's auc: 0.893098\n",
+      "[43]\tvalid_0's auc: 0.893182\n",
+      "[44]\tvalid_0's auc: 0.893771\n",
+      "[45]\tvalid_0's auc: 0.895791\n",
+      "[46]\tvalid_0's auc: 0.895791\n",
+      "[47]\tvalid_0's auc: 0.894444\n",
+      "[48]\tvalid_0's auc: 0.895286\n",
+      "[49]\tvalid_0's auc: 0.894697\n",
+      "[50]\tvalid_0's auc: 0.89436\n",
+      "[51]\tvalid_0's auc: 0.893013\n",
+      "[52]\tvalid_0's auc: 0.890909\n",
+      "[53]\tvalid_0's auc: 0.891246\n",
+      "[54]\tvalid_0's auc: 0.891162\n",
+      "[55]\tvalid_0's auc: 0.891751\n",
+      "[56]\tvalid_0's auc: 0.890993\n",
+      "[57]\tvalid_0's auc: 0.889983\n",
+      "[58]\tvalid_0's auc: 0.889731\n",
+      "[59]\tvalid_0's auc: 0.889646\n",
+      "[60]\tvalid_0's auc: 0.889815\n",
+      "[61]\tvalid_0's auc: 0.890152\n",
+      "[62]\tvalid_0's auc: 0.890152\n",
+      "[63]\tvalid_0's auc: 0.890993\n",
+      "[64]\tvalid_0's auc: 0.887542\n",
+      "[65]\tvalid_0's auc: 0.886448\n",
+      "[66]\tvalid_0's auc: 0.885185\n",
+      "[67]\tvalid_0's auc: 0.886532\n",
+      "[68]\tvalid_0's auc: 0.886953\n",
+      "[69]\tvalid_0's auc: 0.886785\n",
+      "[70]\tvalid_0's auc: 0.88729\n",
+      "[71]\tvalid_0's auc: 0.886953\n",
+      "[72]\tvalid_0's auc: 0.88729\n",
+      "[73]\tvalid_0's auc: 0.885943\n",
+      "[74]\tvalid_0's auc: 0.886785\n",
+      "[75]\tvalid_0's auc: 0.887542\n",
+      "[76]\tvalid_0's auc: 0.887374\n",
+      "[77]\tvalid_0's auc: 0.885859\n",
+      "[78]\tvalid_0's auc: 0.884933\n",
+      "[79]\tvalid_0's auc: 0.884259\n",
+      "[80]\tvalid_0's auc: 0.884933\n",
+      "[81]\tvalid_0's auc: 0.884428\n",
+      "[82]\tvalid_0's auc: 0.88367\n",
+      "[83]\tvalid_0's auc: 0.881818\n",
+      "[84]\tvalid_0's auc: 0.883081\n",
+      "[85]\tvalid_0's auc: 0.882071\n",
+      "[86]\tvalid_0's auc: 0.881902\n",
+      "[87]\tvalid_0's auc: 0.882997\n",
+      "[88]\tvalid_0's auc: 0.883081\n",
+      "[89]\tvalid_0's auc: 0.883165\n",
+      "[90]\tvalid_0's auc: 0.88367\n",
+      "[91]\tvalid_0's auc: 0.884428\n",
+      "[92]\tvalid_0's auc: 0.883838\n",
+      "[93]\tvalid_0's auc: 0.882071\n",
+      "[94]\tvalid_0's auc: 0.881902\n",
+      "[95]\tvalid_0's auc: 0.881313\n",
+      "[96]\tvalid_0's auc: 0.882155\n",
+      "[97]\tvalid_0's auc: 0.880976\n",
+      "[98]\tvalid_0's auc: 0.880556\n",
+      "[99]\tvalid_0's auc: 0.880387\n",
+      "[100]\tvalid_0's auc: 0.880387\n",
+      "[101]\tvalid_0's auc: 0.879966\n",
+      "[102]\tvalid_0's auc: 0.880976\n",
+      "[103]\tvalid_0's auc: 0.881145\n",
+      "[104]\tvalid_0's auc: 0.881987\n",
+      "[105]\tvalid_0's auc: 0.882492\n",
+      "[106]\tvalid_0's auc: 0.882576\n",
+      "[107]\tvalid_0's auc: 0.882492\n",
+      "[108]\tvalid_0's auc: 0.883165\n",
+      "[109]\tvalid_0's auc: 0.883923\n",
+      "[110]\tvalid_0's auc: 0.882071\n",
+      "[111]\tvalid_0's auc: 0.882492\n",
+      "[112]\tvalid_0's auc: 0.881902\n",
+      "[113]\tvalid_0's auc: 0.880303\n",
+      "[114]\tvalid_0's auc: 0.88064\n",
+      "[115]\tvalid_0's auc: 0.879798\n",
+      "[116]\tvalid_0's auc: 0.880556\n",
+      "[117]\tvalid_0's auc: 0.880051\n",
+      "[118]\tvalid_0's auc: 0.879966\n",
+      "[119]\tvalid_0's auc: 0.880556\n",
+      "[120]\tvalid_0's auc: 0.880135\n",
+      "[121]\tvalid_0's auc: 0.880724\n",
+      "[122]\tvalid_0's auc: 0.881061\n",
+      "[123]\tvalid_0's auc: 0.881397\n",
+      "[124]\tvalid_0's auc: 0.881566\n",
       "Early stopping, best iteration is:\n",
-      "[37]\tvalid_0's auc: 0.866693\n"
+      "[24]\tvalid_0's auc: 0.902778\n"
      ]
     },
     {
@@ -5265,15 +4244,15 @@
       "text/plain": [
        "LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,\n",
        "               importance_type='split', lass_weight='balanced',\n",
-       "               learning_rate=0.22, max_depth=65, metrics='auc',\n",
+       "               learning_rate=0.22, max_depth=25, metrics='auc',\n",
        "               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,\n",
-       "               n_estimators=1, n_jobs=-1, num_iterations=250, num_leaves=150,\n",
+       "               n_estimators=35, n_jobs=-1, num_iterations=250, num_leaves=100,\n",
        "               objective='binary', random_state=42, reg_alpha=0.0,\n",
        "               reg_lambda=0.0, silent=True, subsample=1.0,\n",
        "               subsample_for_bin=200000, subsample_freq=0, verbose=-1)"
       ]
      },
-     "execution_count": 249,
+     "execution_count": 330,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -5282,7 +4261,7 @@
     "model.fit(x_train1, y_train1,\n",
     "        eval_set=[(x_test1, y_test1)],\n",
     "        eval_metric=['Accuracy'], \n",
-    "        early_stopping_rounds=200)"
+    "        early_stopping_rounds=100)"
    ]
   },
   {
@@ -5358,7 +4337,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 113,
+   "execution_count": 335,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -5368,34 +4347,34 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 114,
+   "execution_count": 336,
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "array([0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1,\n",
-       "       1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1,\n",
-       "       1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1,\n",
-       "       1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0,\n",
-       "       1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0,\n",
-       "       1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0,\n",
-       "       0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1,\n",
-       "       0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1,\n",
-       "       1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0,\n",
-       "       0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0,\n",
-       "       1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1,\n",
-       "       0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1,\n",
-       "       0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0,\n",
-       "       0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1,\n",
-       "       0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0,\n",
-       "       1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0,\n",
-       "       0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0,\n",
-       "       1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1,\n",
-       "       0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1])"
+       "array([0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1,\n",
+       "       1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1,\n",
+       "       1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1,\n",
+       "       1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0,\n",
+       "       1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0,\n",
+       "       0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0,\n",
+       "       0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0,\n",
+       "       0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1,\n",
+       "       1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0,\n",
+       "       0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0,\n",
+       "       1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1,\n",
+       "       1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1,\n",
+       "       0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0,\n",
+       "       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1,\n",
+       "       0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0,\n",
+       "       1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0,\n",
+       "       0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0,\n",
+       "       1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1,\n",
+       "       0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1])"
       ]
      },
-     "execution_count": 114,
+     "execution_count": 336,
      "metadata": {},
      "output_type": "execute_result"
     }
